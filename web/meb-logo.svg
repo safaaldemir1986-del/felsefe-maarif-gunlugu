@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="215" fill="#f4efe6" stroke="#6f1d2c" stroke-width="14"/>
+  <circle cx="256" cy="256" r="182" fill="none" stroke="#b99a63" stroke-width="4"/>
+  <text x="256" y="248" text-anchor="middle" font-family="Georgia,serif" font-size="108" font-weight="700" fill="#6f1d2c">MEB</text>
+  <text x="256" y="305" text-anchor="middle" font-family="Segoe UI,Arial" font-size="19" font-weight="700" letter-spacing="5" fill="#b99a63">MAARİF</text>
+</svg>
