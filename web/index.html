@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felsefe Maarif Günlüğü</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <main class="app">
+    <section id="setup" class="setup active">
+      <div class="setup-left">
+        <div class="seal-wrap">
+          <div class="orbit orbit-a"><span>Φ</span><span>Λ</span><span>Σ</span><span>Ω</span></div>
+          <div class="orbit orbit-b"></div>
+          <div class="seal">
+            <img src="meb-logo.svg" alt="T.C. Millî Eğitim Bakanlığı" onerror="this.style.display='none'; document.querySelector('.seal-fallback').style.display='grid';" />
+            <div class="seal-fallback">MEB</div>
+          </div>
+        </div>
+
+        <div class="intro">
+          <span class="kicker">ÖĞRETMEN MASAÜSTÜ • FELSEFE</span>
+          <h1>Felsefe<br><em>Maarif Günlüğü</em></h1>
+          <div class="rule"><span>Φ</span></div>
+          <p class="lead">Planı, fikri ve öğretmen hafızasını tek bir zarif masaüstünde birleştiren kişisel felsefe günlüğü.</p>
+          <blockquote>“Sorgulanmamış hayat, yaşanmaya değmez.”</blockquote>
+        </div>
+      </div>
+
+      <form id="profileForm" class="identity-card">
+        <div class="card-topline"></div>
+        <span class="micro">İLK KURULUM</span>
+        <h2>Günlüğünüzü<br>kişiselleştirin.</h2>
+        <p class="muted">Bu bilgiler yalnızca bu cihazda saklanır.</p>
+
+        <label><span>Öğretmenin Adı Soyadı</span><input id="teacherInput" required placeholder="Ad Soyad" /></label>
+        <label><span>Okul</span><input id="schoolInput" required placeholder="Okul adı" /></label>
+
+        <button type="submit"><span>Günlüğü Aç</span><b>→</b></button>
+        <div class="card-foot">FELSEFE MAARİF GÜNLÜĞÜ • 2026</div>
+      </form>
+    </section>
+
+    <section id="dashboard" class="dashboard">
+      <aside class="sidebar">
+        <div>
+          <div class="brand-mark"><span class="phi">Φ</span><div><strong>Felsefe</strong><small>Maarif Günlüğü</small></div></div>
+          <nav>
+            <button class="nav-item active" data-section="home"><span>01</span>Ana Sayfa</button>
+            <button class="nav-item" data-section="annual"><span>02</span>Yıllık Plan</button>
+            <button class="nav-item" data-section="daily"><span>03</span>Günlük Planlar</button>
+            <button class="nav-item" data-section="performance"><span>04</span>Performans Ödevleri</button>
+            <button class="nav-item" data-section="activities"><span>05</span>Etkinlik Fikirleri</button>
+            <button class="nav-item" data-section="days"><span>06</span>Önemli Gün & Haftalar</button>
+            <button class="nav-item" data-section="journal"><span>07</span>Sizin Ajandanız</button>
+          </nav>
+        </div>
+        <div class="sidebar-bottom">
+          <div class="teacher-mini"><span class="avatar" id="teacherInitials">SA</span><div><b id="sideTeacher">Öğretmen</b><small id="sideSchool">Okul</small></div></div>
+          <button id="editProfile" class="text-btn">Bilgileri düzenle</button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="topbar"><div><span class="today-label">BUGÜN</span><b id="today"></b></div><div class="top-ornament">☙ <span>Φ</span> ❧</div><div id="clock" class="clock"></div></header>
+
+        <section id="home" class="panel active">
+          <div class="welcome-row">
+            <div><span class="eyebrow">KİŞİSEL ÖĞRETMEN GÜNLÜĞÜ</span><h2>Hoş geldiniz,<br><em id="welcomeName">Öğretmenim.</em></h2><p id="welcomeSchool"></p></div>
+            <div class="quote-card"><span class="quote-mark">“</span><p id="quoteText">Bilgelik, neyi bilmediğini bilmektir.</p><small id="quoteAuthor">— Sokrates</small></div>
+          </div>
+          <div class="section-title"><span>MASANIZ</span><div></div></div>
+          <div class="module-grid">
+            <button class="module large" data-go="annual"><span class="number">I</span><div><small>ÖĞRETİM YILI</small><h3>Yıllık Plan</h3><p>Üniteler, haftalar, kazanımlar ve ders akışı.</p></div><b>↗</b></button>
+            <button class="module" data-go="daily"><span class="number">II</span><div><h3>Günlük Planlar</h3><p>Derse özel günlük plan arşivi.</p></div><b>↗</b></button>
+            <button class="module" data-go="performance"><span class="number">III</span><div><h3>Performans Ödevleri</h3><p>Hazır başlıklar, fikirler ve değerlendirme notları.</p></div><b>↗</b></button>
+            <button class="module" data-go="activities"><span class="number">IV</span><div><h3>Etkinlik Fikirleri</h3><p>Sınıf içi tartışma, oyun ve düşünme etkinlikleri.</p></div><b>↗</b></button>
+            <button class="module" data-go="days"><span class="number">V</span><div><h3>Önemli Gün & Haftalar</h3><p>Felsefeyle ilişkilendirilebilecek özel tarihler.</p></div><b>↗</b></button>
+            <button class="module dark" data-go="journal"><span class="number">VI</span><div><small>SADECE SİZE ÖZEL</small><h3>Sizin Ajandanız</h3><p>Notlarınız, yapılacaklarınız ve aklınıza düşen fikirler.</p></div><b>↗</b></button>
+          </div>
+        </section>
+
+        <section id="annual" class="panel inner-panel"><div class="inner-head"><div><span>02</span><h2>Yıllık Plan</h2></div><p>Öğretim yılının bütününü tek bakışta görün.</p></div><div class="placeholder-grid"><article><small>EYLÜL</small><h3>Başlangıç</h3><p>Ünite, konu ve kazanım planlaması için alan.</p></article><article><small>EKİM — ARALIK</small><h3>I. Dönem</h3><p>Hafta hafta ders akışı ve notlar.</p></article><article><small>ŞUBAT — HAZİRAN</small><h3>II. Dönem</h3><p>Yıllık devam planı ve değerlendirme.</p></article></div></section>
+        <section id="daily" class="panel inner-panel"><div class="inner-head"><div><span>03</span><h2>Günlük Planlar</h2></div><p>Her ders için kısa, kullanışlı ve arşivlenebilir planlar.</p></div><div class="paper-card"><div><b>Dersin Konusu</b><span>Konu / kazanım</span></div><div><b>Dersin Akışı</b><span>Giriş • Tartışma • Etkinlik • Sonuç</span></div><div><b>Ders Sonu Notu</b><span>Bir sonraki ders için hatırlatma</span></div></div></section>
+        <section id="performance" class="panel inner-panel"><div class="inner-head"><div><span>04</span><h2>Performans Ödevleri & Fikirleri</h2></div><p>Öğrenciyi araştırmaya, düşünmeye ve üretmeye yönelten çalışmalar.</p></div><div class="idea-list"><article><b>Bir Filozofun Günlüğü</b><p>Öğrenci seçtiği filozofun bir gününü, düşünce dünyasına uygun biçimde yazar.</p></article><article><b>Felsefi Kavram Dosyası</b><p>Bir kavramın tarihsel değişimini kısa örneklerle izler.</p></article><article><b>Gündelik Hayatta Felsefe</b><p>Günlük bir sorunu iki farklı filozofun yaklaşımıyla yorumlar.</p></article></div></section>
+        <section id="activities" class="panel inner-panel"><div class="inner-head"><div><span>05</span><h2>Etkinlik Fikirleri</h2></div><p>Sınıfı düşünme alanına çeviren kısa uygulamalar.</p></div><div class="idea-list"><article><b>Bir Dakikalık Savunma</b><p>Öğrenci rastgele verilen bir görüşü bir dakika savunur.</p></article><article><b>Filozof Sandalyesi</b><p>Bir öğrenci filozofu canlandırır, sınıf sorular sorar.</p></article><article><b>İkilem Masası</b><p>Ahlaki ikilemler küçük gruplarda gerekçeleriyle tartışılır.</p></article></div></section>
+        <section id="days" class="panel inner-panel"><div class="inner-head"><div><span>06</span><h2>Önemli Gün & Haftalar</h2></div><p>Takvimdeki özel günleri felsefi temalarla ilişkilendirin.</p></div><div class="timeline"><article><time>21 EYLÜL</time><div><b>Dünya Barış Günü</b><p>Barış, savaş, adalet ve insan doğası üzerine tartışma.</p></div></article><article><time>10 ARALIK</time><div><b>İnsan Hakları Günü</b><p>Hak, özgürlük, eşitlik ve sorumluluk.</p></div></article><article><time>KASIM</time><div><b>Dünya Felsefe Günü</b><p>Okul çapında felsefe etkinliği ve öğrenci forumu.</p></div></article></div></section>
+        <section id="journal" class="panel inner-panel"><div class="inner-head"><div><span>07</span><h2>Sizin Ajandanız</h2></div><p>Bu alan yalnızca size ait. Yazdıklarınız bu cihazda saklanır.</p></div><div class="journal-layout"><textarea id="journalText" placeholder="Bugün aklımda kalanlar, yapılacaklar, ders fikirleri..."></textarea><div class="journal-side"><span>BUGÜNÜN NOTU</span><p>Bir ders bazen planlandığı gibi değil, ihtiyaç duyulduğu gibi ilerler.</p><button id="saveJournal">Notları Kaydet</button><small id="saveState">Henüz kaydedilmedi.</small></div></div></section>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
