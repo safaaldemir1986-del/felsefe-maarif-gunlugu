@@ -1,0 +1,41 @@
+name: Build Windows Installer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Kodu al
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Rust kur
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: NPM bağımlılıklarını kur
+        run: npm install
+
+      - name: Windows ikonlarını üret
+        run: npx tauri icon web/app-icon.svg
+
+      - name: Setup.exe oluştur
+        run: npm run build:windows
+
+      - name: Kurulum dosyasını artifact olarak yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: Felsefe-Maarif-Gunlugu-Setup
+          path: src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
