@@ -1,0 +1,13 @@
+{
+  "name": "felsefe-maarif-gunlugu",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Felsefe öğretmenleri için kişisel masaüstü günlüğü",
+  "scripts": {
+    "tauri": "tauri",
+    "build:windows": "tauri build --bundles nsis"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.0"
+  }
+}
